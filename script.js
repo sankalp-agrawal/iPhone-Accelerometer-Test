@@ -10,11 +10,11 @@ function getAccel() {
 }
 
 function recordAccel() {
-	window.addEventListener('deviceorientation',(event) => {
-                console.log(event);
-		var x = 1
-		x = event.gamma
+	window.addEventListener('devicemotion',(event) => {
+                console.log(event.acceleration.y);
+		var y = 1
+		y = event.acceleration.y
 		var text = document.getElementById("Accel");
-		text.innerHTML = Math.round(x * 100) / 100
+		text.innerHTML = Math.round(y * 100) / 100
     	});
 }
