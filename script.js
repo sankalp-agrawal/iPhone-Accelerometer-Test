@@ -14,5 +14,5 @@ function getAccel() {
 }
 
 function function() {
-	return 5
+	document.getElementById("demo").innerHTML = It Worked;
 }
