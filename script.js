@@ -15,6 +15,6 @@ function recordAccel() {
 		var x = 1
 		x = event.gamma
 		var text = document.getElementById("Accel");
-		text.innerHTML = x
+		text.innerHTML = Math.round(x * 100) / 100
     	});
 }
