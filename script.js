@@ -14,7 +14,7 @@ function recordAccel() {
                 console.log(event);
 		var x = 1
 		x = event.gamma
-		var text = document.getElementByID("Accel");
+		var text = document.getElementById("Accel");
 		text.innerHTML = x
     	});
 }
