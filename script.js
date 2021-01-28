@@ -14,5 +14,9 @@ function getAccel() {
 }
 
 function function() {
-	document.getElementById("demo").innerHTML = It Worked;
+	var text = document.getElementById("demo");
+	if (x.innerHTML === "Hello") {
+  		x.innerHTML = "Swapped text!";
+	}
+  }
 }
