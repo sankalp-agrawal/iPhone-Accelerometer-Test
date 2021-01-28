@@ -1,4 +1,4 @@
-function myfunction() {
-	var text = document.getElementById("demo");
-	text.innerHTML = "Swapped text!";
+function getAccel() {
+	var text = document.getElementById("Access");
+	text.innerHTML = "Access Granted!";
 }
