@@ -15,6 +15,6 @@ function recordAccel() {
 		var y = 1
 		y = event.acceleration.y
 		var text = document.getElementById("Accel");
-		text.innerHTML = Math.round(y * 100) / 100
+		text.innerHTML = Math.round(y *9.81 * 100) / 100 + " m/s^2"
     	});
 }
