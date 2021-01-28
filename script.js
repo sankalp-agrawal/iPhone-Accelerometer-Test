@@ -4,6 +4,11 @@ function getAccel() {
 		if (response == 'granted') {
 		    console.log("accelerometer permission granted");
 		    text.innerHTML = "Access Granted!";
+		    recordAccel()
 		}
     	});
+}
+
+function recordAccel() {
+	#stuff
 }
