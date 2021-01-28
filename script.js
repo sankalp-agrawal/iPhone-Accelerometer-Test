@@ -1,6 +1,6 @@
 function myfunction() {
 	var text = document.getElementById("demo");
-	if (x.innerHTML === "Hello") {
-  		x.innerHTML = "Swapped text!";
+	if (text.innerHTML === "Hello") {
+  		text.innerHTML = "Swapped text!";
 	}
 }
