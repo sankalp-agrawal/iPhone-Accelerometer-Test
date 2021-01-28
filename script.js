@@ -12,3 +12,7 @@ function getAccel() {
       }
   });
 }
+
+function function() {
+	return 5
+}
