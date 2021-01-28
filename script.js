@@ -10,7 +10,11 @@ function getAccel() {
 }
 
 function recordAccel() {
-	window.addEventListener('devicemotion', (event) => {
+	window.addEventListener('deviceorientation',(event) => {
                 console.log(event);
-	});
+		var x = 1
+		x = event.gamma
+		var text = document.getElementByID("Accel"):
+		text.innerHTML = x
+    	});
 }
