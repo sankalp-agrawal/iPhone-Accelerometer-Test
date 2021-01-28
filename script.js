@@ -10,5 +10,7 @@ function getAccel() {
 }
 
 function recordAccel() {
-	//stuff
+	window.addEventListener('devicemotion', (event) => {
+                console.log(event);
+	});
 }
