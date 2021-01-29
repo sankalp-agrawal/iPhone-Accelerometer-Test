@@ -22,9 +22,6 @@ function recordAccel() {
 		text.innerHTML = y + " m/s^2 at " + time + "seconds"
     	});
 	console.log("end")
-	while (true) {
-		console.log("hi")
-	}
 }
 
 //function Time() {
