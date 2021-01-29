@@ -1,4 +1,4 @@
-var time  = 0
+var x = 1
 
 function getAccel() {
 	var text = document.getElementById("Access");
@@ -11,21 +11,14 @@ function getAccel() {
 }
 
 function recordAccel() {
-	//Time();
-	//console.log("start = " + time);
 	window.addEventListener('devicemotion',(event) => {
 		var y = 1
 		//var interval = (time)
-		console.log(event.acceleration.y);
+		console.log(event.acceleration.y + " " + x);
+		x = x+1
 		y = Math.round((event.acceleration.y) * 100) / 100
 		var text = document.getElementById("Accel");
 		text.innerHTML = y + " m/s^2 at " + time + "seconds"
     	});
 	console.log("end")
 }
-
-//function Time() {
-//	time += .1
-//	console.log(time)
-//	setTimeout(Time(), 100);
-//}
