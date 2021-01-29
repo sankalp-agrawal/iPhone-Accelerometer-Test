@@ -32,8 +32,8 @@ function stopRecord() {
 
 function test() {
 	const rows = [
-		["name1", "city1", "some other info"],
-		["name2", "city2", "more info"]
+		["1", "2", "3"],
+		["4", "5", "6"]
 	];
 
 	let csvContent = "data:text/csv;charset=utf-8,";
