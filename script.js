@@ -1,4 +1,8 @@
 var x = 1
+var exportData = [
+	["1", "2", "3"],
+	["4", "5", "6"]
+	];
 
 function getAccel() {
 	var text = document.getElementById("Access");
@@ -31,13 +35,9 @@ function stopRecord() {
 }
 
 function test() {
-	const rows = [
-		["1", "2", "3"],
-		["4", "5", "6"]
-	];
 
 	let csvContent = "data:text/csv;charset=utf-8,";
-	rows.forEach(function(rowArray) {
+	exportData.forEach(function(rowArray) {
 		let row = rowArray.join(",");
 		csvContent += row + "\r\n";
 	});
