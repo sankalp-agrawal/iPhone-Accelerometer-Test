@@ -26,7 +26,7 @@ function recordAccel() {
 }
 
 function startTimer() {
-	var start = time();
+	start = time();
 }
 function time() {
 	return d.getTime();
