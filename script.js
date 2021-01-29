@@ -13,7 +13,7 @@ function recordAccel() {
 	console.log("start = " + start);
 	window.addEventListener('devicemotion',(event) => {
 		var y = 1
-		var interval = (time() - (start))
+		var interval = (time())
 		console.log(event.acceleration.y + " " + interval);
 		var timeString = interval.toString();
 		y = Math.round((event.acceleration.y) * 100) / 100 + timeString
