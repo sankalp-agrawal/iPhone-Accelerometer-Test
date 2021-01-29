@@ -15,12 +15,12 @@ function recordAccel() {
 	console.log("start = " + start);
 	window.addEventListener('devicemotion',(event) => {
 		var y = 1
-		var interval = (time())
+		var interval = (time() - start)
 		console.log(event.acceleration.y + " " + interval);
 		var timeString = interval.toString();
-		y = Math.round((event.acceleration.y) * 100) / 100 + timeString
+		y = Math.round((event.acceleration.y) * 100) / 100
 		var text = document.getElementById("Accel");
-		text.innerHTML = y + " m/s^2"
+		text.innerHTML = y + " m/s^2 at " + timeString + "seconds"
     	});
 }
 
