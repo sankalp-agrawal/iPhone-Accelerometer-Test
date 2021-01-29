@@ -19,7 +19,7 @@ function recordAccel() {
 		y = Math.round((event.acceleration.y) * 100) / 100
 		var text = document.getElementById("Accel");
 		var time = (d.getTime() - startTime)/1000
-		text.innerHTML = y + " m/s^2" <br> "Time Passed: " + time + " seconds"
+		text.innerHTML = y + " m/s^2" + "Time Passed: " + time + " seconds"
 		console.log(event.acceleration.y + " " + time);
 
     	});
