@@ -3,6 +3,9 @@ var exportData = [
 	["1", "2", "3"],
 	["4", "5", "6"]
 	];
+var newData = [1, 2, 3]
+exportData.push(newData);
+console.log(exportData);
 
 function getAccel() {
 	var text = document.getElementById("Access");
