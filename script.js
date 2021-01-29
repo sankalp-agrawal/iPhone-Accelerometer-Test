@@ -26,5 +26,5 @@ function recordAccel() {
 function Time() {
 	time += 10
 	console.log(time)
-	setTimeout(time(), 10);
+	setTimeout(Time(), 10);
 }
