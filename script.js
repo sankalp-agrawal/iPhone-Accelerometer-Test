@@ -1,3 +1,5 @@
+var d = new Date();
+
 function getAccel() {
 	var text = document.getElementById("Access");
 	DeviceMotionEvent.requestPermission().then(response => {
@@ -23,6 +25,5 @@ function recordAccel() {
 }
 
 function time() {
-	var d = new Date();
 	return d.getTime();
 }
