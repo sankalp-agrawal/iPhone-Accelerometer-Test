@@ -24,7 +24,7 @@ function recordAccel() {
 	console.log("end")
 	var i;
 	for (i = 0; i < 5; i++) {
-		console.log(event.acceleration.y);
+		console.log(event.acceleration);
 	}
 }
 
