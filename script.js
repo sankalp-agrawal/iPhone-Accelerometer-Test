@@ -28,4 +28,4 @@ function recordAccel() {
 //	time += .1
 //	console.log(time)
 //	setTimeout(Time(), 100);
-/}
+//}
