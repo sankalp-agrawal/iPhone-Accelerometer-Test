@@ -25,3 +25,7 @@ function recordAccel() {
     	});
 	console.log("end")
 }
+
+function stopRecord() {
+	window.removeEventListener();
+}
