@@ -1,4 +1,4 @@
-var start = 0
+var time  = 0
 
 function getAccel() {
 	var text = document.getElementById("Access");
@@ -11,12 +11,12 @@ function getAccel() {
 }
 
 function recordAccel() {
-	startTimer();
-	console.log("start = " + start);
+	time();
+	console.log("start = " + time);
 	window.addEventListener('devicemotion',(event) => {
 		var y = 1
-		var interval = (time() - start)
-		console.log(event.acceleration.y + " " + time() + " " + start);
+		var interval = (time)
+		console.log(event.acceleration.y + " " + time);
 		var timeString = interval.toString();
 		y = Math.round((event.acceleration.y) * 100) / 100
 		var text = document.getElementById("Accel");
@@ -24,11 +24,7 @@ function recordAccel() {
     	});
 }
 
-function startTimer() {
-	var d = new Date();
-	start = d.getTime();
-}
 function time() {
-	var e = new Date();
-	return e.getTime();
+	time += 10
+	setTimeout(time(), 10);
 }
