@@ -4,17 +4,20 @@ function getAccel() {
 		if (response == 'granted') {
 		    console.log("accelerometer permission granted");
 		    text.innerHTML = "Access Granted!";
-		    recordAccel()
 		}
     	});
 }
 
 function recordAccel() {
+	var d = new Date();
+	var start = d.getTime();
 	window.addEventListener('devicemotion',(event) => {
                 console.log(event.acceleration.y);
 		var y = 1
-		y = event.acceleration.y
+		var time = (d.getTime() - (start))/1000
+		var timeString = time.toString();
+		y = Math.round((event.acceleration.y) * 100) / 100 + timeString
 		var text = document.getElementById("Accel");
-		text.innerHTML = Math.round(y * 100) / 100 + " m/s^2"
+		text.innerHTML = y + " m/s^2"
     	});
 }
