@@ -13,12 +13,13 @@ function getAccel() {
 function recordAccel() {
 	window.addEventListener('devicemotion',(event) => {
 		var y = 1
+		var d = new Date();
 		//var interval = (time)
 		console.log(event.acceleration.y + " " + x);
 		x = x+1
 		y = Math.round((event.acceleration.y) * 100) / 100
 		var text = document.getElementById("Accel");
-		text.innerHTML = y + " m/s^2 at "
+		text.innerHTML = y + " m/s^2 at " + d.getTime();
     	});
 	console.log("end")
 }
