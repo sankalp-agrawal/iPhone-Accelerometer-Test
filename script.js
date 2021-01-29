@@ -11,7 +11,7 @@ function getAccel() {
 }
 
 function recordAccel() {
-	Time();
+	//Time();
 	//console.log("start = " + time);
 	window.addEventListener('devicemotion',(event) => {
 		var y = 1
