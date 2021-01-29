@@ -11,7 +11,7 @@ function getAccel() {
 }
 
 function recordAccel() {
-	var start = time();
+	startTimer();
 	console.log("start = " + start);
 	window.addEventListener('devicemotion',(event) => {
 		var y = 1
@@ -24,6 +24,9 @@ function recordAccel() {
     	});
 }
 
+function startTimer() {
+	var start = time();
+}
 function time() {
 	return d.getTime();
 }
