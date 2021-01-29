@@ -43,4 +43,5 @@ function test() {
 	});
 	var encodedUri = encodeURI(csvContent);
 	window.open(encodedUri);
+	console.log("downloaded")
 }
