@@ -1,4 +1,3 @@
-var d = new Date();
 var start = 0
 
 function getAccel() {
@@ -26,8 +25,10 @@ function recordAccel() {
 }
 
 function startTimer() {
-	start = time();
+	var d = new Date();
+	start = d.getTime();
 }
 function time() {
-	return d.getTime();
+	var e = new Date();
+	return e.getTime();
 }
