@@ -1,4 +1,5 @@
 var d = new Date();
+var start = 0
 
 function getAccel() {
 	var text = document.getElementById("Access");
