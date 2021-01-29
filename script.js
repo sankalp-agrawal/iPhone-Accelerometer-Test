@@ -21,6 +21,7 @@ function recordAccel() {
 		var text = document.getElementById("Accel");
 		text.innerHTML = y + " m/s^2 at " + time + "seconds"
     	});
+	console.log("end")
 }
 
 function Time() {
