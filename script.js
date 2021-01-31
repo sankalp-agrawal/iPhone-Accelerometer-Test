@@ -1,6 +1,6 @@
 var x = 1
 var exportData = [
-	["1", "2", "3"],
+	["time (s)", "accel_y (m/s)", "3"],
 	["4", "5", "6"]
 	];
 var newData = [1, 2, 3]
