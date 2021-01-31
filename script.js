@@ -1,9 +1,9 @@
 var x = 1
 var exportData = [
-	["time (s)", "accel_y (m/s)", "3"],
-	["4", "5", "6"]
+	["time (s)", "accel_y (m/s)"],
+	["4", "5"]
 	];
-var newData = [1, 2, 3]
+var newData = [1, 2]
 exportData.push(newData);
 console.log(exportData);
 
