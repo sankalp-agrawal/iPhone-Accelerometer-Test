@@ -1,7 +1,6 @@
 var x = 1
 var exportData = [
 	["time (s)", "accel_y (m/s)"],
-	["4", "5"]
 	];
 var newData = [1, 2]
 exportData.push(newData);
@@ -29,7 +28,7 @@ function recordAccel() {
 		text.innerHTML = y + " m/s^2" + "Time Passed: " + time + " seconds"
 		console.log(event.acceleration.y + " " + time);
 		console.log([event.acceleration.y, time])
-		var newData = [event.acceleration.y, time]
+		var newData = [time, event.acceleration.y]
 		exportData.push(newData);
     	});
 	console.log("end")
