@@ -28,6 +28,7 @@ function recordAccel() {
 		var time = (d.getTime() - startTime)/1000
 		text.innerHTML = y + " m/s^2" + "Time Passed: " + time + " seconds"
 		console.log(event.acceleration.y + " " + time);
+		console.log([event.acceleration.y, time])
 
     	});
 	console.log("end")
