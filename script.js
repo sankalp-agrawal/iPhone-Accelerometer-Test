@@ -38,7 +38,7 @@ function stopRecord() {
 	window.removeEventListener();
 }
 
-function test() {
+function download() {
 
 	let csvContent = "data:text/csv;charset=utf-8,";
 	exportData.forEach(function(rowArray) {
