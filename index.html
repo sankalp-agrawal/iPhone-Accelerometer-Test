@@ -25,13 +25,6 @@
 		</head>
 		<body>
 			<h1 class="big">Test</h1>
-			<button onclick="getAccel()"><h1 style="font-size:20px;">Give Data Permission</h1></button>
-			<button onclick="recordAccel()"><h1 style="font-size:20px;">Start Recording</h1></button>
-			<button onclick="test()"><h1 style="font-size:20px;">Test</h1></button>
-
-			<p id="Access">Access Not Granted</p>
-			<hr>
-			<p class="big" id="Accel">No Data</p>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="btn-group btn-group-justified">
@@ -42,10 +35,14 @@
 					   		<button type="button" class="btn btn-primary" onclick="recordAccel()">Start Recording</button>
 						</div>
 					 	<div class="btn-group">
-					   		<button type="button" class="btn btn-primary" onclick="test()">Download</button>
+					   		<button type="button" class="btn btn-primary" onclick="download()">Download</button>
 					 	</div>
 					</div>
 				</div>
 			</div>
+			<p id="Access">Access Not Granted</p>
+			<hr>
+			<p class="" id="Accel">No Data</p>
+			
 		</body>
 	</html>
