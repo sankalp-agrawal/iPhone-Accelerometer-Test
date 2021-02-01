@@ -1,9 +1,8 @@
 var x = 1
 var exportData = [
-	["time (s)", "accel_y (m/s)"],
+	["time", "accel_y"],
 	];
 var newData = [1, 2]
-exportData.push(newData);
 console.log(exportData);
 
 function getAccel() {
