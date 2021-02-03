@@ -50,12 +50,12 @@ function stopRecord() {
 }
 
 function clear() {
-	if (confirm("Are you sure you want to clear data?")) {
+	if (window.confirm("Are you sure you want to clear data?")) {
   		var exportData = [
 		["time", "accel_y"],
 		];
 	} else {
- 		alert("Canceled");
+ 		window.alert("Canceled");
 	}
 }
 
