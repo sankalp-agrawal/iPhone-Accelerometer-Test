@@ -50,6 +50,7 @@ function stopRecord() {
 }
 
 function clear() {
+	console.log("clear button pressed")
 	if (window.confirm("Are you sure you want to clear data?")) {
   		var exportData = [
 		["time", "accel_y"],
