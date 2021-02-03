@@ -34,7 +34,7 @@ function recordAccel() {
 }
 
 function stopRecord() {
-	window.removeEventListener();
+	window.removeEventListener('devicemotion', (event));
 }
 
 function download() {
