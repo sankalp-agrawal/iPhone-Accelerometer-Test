@@ -31,7 +31,7 @@ function newRecord(t) {
 }
 
 function recordAccel() {
-	x = 1
+	Start = 1
 	var e = new Date();
 	window.startTime = e.getTime();
 	window.addEventListener('devicemotion', (event) => {
@@ -48,6 +48,17 @@ function recordAccel() {
 function stopRecord() {
 	Start = 0
 }
+
+function clear() {
+	if (confirm("Are you sure you want to clear data?")) {
+  		var exportData = [
+		["time", "accel_y"],
+		];
+	} else {
+ 		alert("Canceled");
+	}
+}
+
 
 function download() {
 
