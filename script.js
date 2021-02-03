@@ -27,6 +27,7 @@ function newRecord(t) {
 	console.log([t.acceleration.y, time])
 	var newData = [time, t.acceleration.y]
 	exportData.push(newData);
+	console.log(Start)
 }
 
 function recordAccel() {
@@ -39,12 +40,13 @@ function recordAccel() {
 			text.innerHTML = "STOPPED"
 		} else {
 			newRecord(event);
+		}
 	});
 	console.log("end");
 }
 
 function stopRecord() {
-	x = 0
+	Start = 0
 }
 
 function download() {
