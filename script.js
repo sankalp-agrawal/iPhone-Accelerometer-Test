@@ -35,7 +35,7 @@ function recordAccel() {
 	var e = new Date();
 	window.startTime = e.getTime();
 	window.addEventListener('devicemotion', (event) => {
-		if (Start = 0) {
+		if (Start == 0) {
 			var text = document.getElementById("Accel");
 			text.innerHTML = "STOPPED"
 		} else {
