@@ -1,5 +1,6 @@
 var x = 1
 var y = 1
+var Start = 1
 var exportData = [
 	["time", "accel_y"],
 	];
@@ -29,19 +30,21 @@ function newRecord(t) {
 }
 
 function recordAccel() {
+	x = 1
 	var e = new Date();
 	window.startTime = e.getTime();
 	window.addEventListener('devicemotion', (event) => {
-		newRecord(event);
+		if (Start = 0) {
+			var text = document.getElementById("Accel");
+			text.innerHTML = "STOPPED"
+		} else {
+			newRecord(event);
 	});
 	console.log("end");
 }
 
 function stopRecord() {
-	window.removeEventListener('devicemotion', (event) => {
-		newRecord(event);
-	});
-	console.log("stop");
+	x = 0
 }
 
 function download() {
