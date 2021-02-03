@@ -1,4 +1,5 @@
 var x = 1
+var y = 1
 var exportData = [
 	["time", "accel_y"],
 	];
@@ -16,16 +17,15 @@ function getAccel() {
 }
 
 function newRecord(event) {
-	var y = 1
-		var d = new Date();
-		y = Math.round((event.acceleration.y) * 100) / 100
-		var text = document.getElementById("Accel");
-		var time = (d.getTime() - startTime)/1000
-		text.innerHTML = y + " m/s^2" + "Time Passed: " + time + " seconds"
-		console.log(event.acceleration.y + " " + time);
-		console.log([event.acceleration.y, time])
-		var newData = [time, event.acceleration.y]
-		exportData.push(newData);
+	var d = new Date();
+	y = Math.round((event.acceleration.y) * 100) / 100
+	var text = document.getElementById("Accel");
+	var time = (d.getTime() - startTime)/1000
+	text.innerHTML = y + " m/s^2" + "Time Passed: " + time + " seconds"
+	console.log(event.acceleration.y + " " + time);
+	console.log([event.acceleration.y, time])
+	var newData = [time, event.acceleration.y]
+	exportData.push(newData);
 }
 
 function recordAccel() {
