@@ -17,7 +17,9 @@ function getAccel() {
 }
 
 function newRecord(t) {
+	console.log(startTime);
 	var d = new Date();
+	console.log(startTime);
 	y = Math.round((t.acceleration.y) * 100) / 100
 	var text = document.getElementById("Accel");
 	var time = (d.getTime() - startTime)/1000
@@ -42,7 +44,6 @@ function recordAccel() {
 	//	var newData = [time, event.acceleration.y]
 	//	exportData.push(newData);
 	//	console.log(event)
-		console.log(startTime);
 		newRecord(event);
 	});
 	console.log("end");
