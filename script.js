@@ -1,6 +1,7 @@
 var x = 1
 var y = 1
 var Start = 1
+window.alert("Canceled");
 var exportData = [
 	["time", "accel_y"],
 	];
