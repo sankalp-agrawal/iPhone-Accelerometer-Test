@@ -17,12 +17,11 @@ function getAccel() {
 }
 
 function newRecord(t) {
-	console.log(startTime);
 	var d = new Date();
-	console.log(startTime);
+	console.log(window.startTime);
 	y = Math.round((t.acceleration.y) * 100) / 100
 	var text = document.getElementById("Accel");
-	var time = (d.getTime() - startTime)/1000
+	var time = (d.getTime() - window.startTime)/1000
 	text.innerHTML = y + " m/s^2" + "Time Passed: " + time + " seconds"
 	console.log(t.acceleration.y + " " + time);
 	console.log([t.acceleration.y, time])
@@ -32,7 +31,7 @@ function newRecord(t) {
 
 function recordAccel() {
 	var e = new Date();
-	var startTime = e.getTime();
+	window.startTime = e.getTime();
 	window.addEventListener('devicemotion', (event) => {
 	//	var d = new Date();
 	//	y = Math.round((event.acceleration.y) * 100) / 100
