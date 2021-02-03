@@ -16,15 +16,15 @@ function getAccel() {
     	});
 }
 
-function newRecord(event) {
+function newRecord(t) {
 	var d = new Date();
-	y = Math.round((event.acceleration.y) * 100) / 100
+	y = Math.round((t.acceleration.y) * 100) / 100
 	var text = document.getElementById("Accel");
 	var time = (d.getTime() - startTime)/1000
 	text.innerHTML = y + " m/s^2" + "Time Passed: " + time + " seconds"
-	console.log(event.acceleration.y + " " + time);
-	console.log([event.acceleration.y, time])
-	var newData = [time, event.acceleration.y]
+	console.log(t.acceleration.y + " " + time);
+	console.log([t.acceleration.y, time])
+	var newData = [time, t.acceleration.y]
 	exportData.push(newData);
 }
 
