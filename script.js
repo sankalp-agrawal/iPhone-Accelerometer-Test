@@ -15,11 +15,8 @@ function getAccel() {
     	});
 }
 
-function recordAccel() {
-	var e = new Date();
-	var startTime = e.getTime();
-	window.addEventListener('devicemotion',(event) => {
-		var y = 1
+function newRecord(event) {
+	var y = 1
 		var d = new Date();
 		y = Math.round((event.acceleration.y) * 100) / 100
 		var text = document.getElementById("Accel");
@@ -29,7 +26,12 @@ function recordAccel() {
 		console.log([event.acceleration.y, time])
 		var newData = [time, event.acceleration.y]
 		exportData.push(newData);
-    	});
+}
+
+function recordAccel() {
+	var e = new Date();
+	var startTime = e.getTime();
+	window.addEventListener('devicemotion', newRecord(event));
 	console.log("end")
 }
 
