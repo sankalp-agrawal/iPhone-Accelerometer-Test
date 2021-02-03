@@ -41,6 +41,7 @@ function stopRecord() {
 	window.removeEventListener('devicemotion', (event) => {
 		newRecord(event);
 	});
+	console.log("stop");
 }
 
 function download() {
