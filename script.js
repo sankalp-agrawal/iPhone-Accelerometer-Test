@@ -71,10 +71,10 @@ function download() {
 		csvContent += row + "\r\n";
 	});
 	var encodedUri = encodeURI(csvContent);
-	var download = document.createElement("a");
-	link.href = csvContent;
-	link.download = "Experiment_1.csv";
-	link.click();
+	var datadownload = document.createElement("a");
+	datadownload.href = csvContent;
+	datadownload.download = "Experiment_1.csv";
+	datadownload.click();
 	
 	window.open(encodedUri);
 	console.log("downloaded");
