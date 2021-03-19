@@ -65,7 +65,6 @@ function clear() {
 
 
 function download() {
-
 	let csvContent = "data:text/csv;charset=utf-8,";
 	exportData.forEach(function(rowArray) {
 		let row = rowArray.join(",");
