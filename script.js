@@ -75,7 +75,4 @@ function download() {
 	datadownload.href = csvContent;
 	datadownload.download = "Experiment_1.csv";
 	datadownload.click();
-	
-	window.open(encodedUri);
-	console.log("downloaded");
 }
