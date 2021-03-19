@@ -73,7 +73,7 @@ function download() {
 	var encodedUri = encodeURI(csvContent);
 	var datadownload = document.createElement("a");
 	datadownload.href = csvContent;
-	console.log(document.getElementById("number").value)
+	var number = document.getElementById("number").value
 	datadownload.download = String("Experiment_" + number +".csv");
 	datadownload.click();
 }
