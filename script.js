@@ -2,7 +2,7 @@ var x = 1
 var y = 1
 var Start = 1
 var exportData = [
-	["time", "accel_y"],
+	["time", "accel_y", "accel_x"],
 	];
 var newData = [1, 2]
 console.log(exportData);
@@ -20,12 +20,15 @@ function getAccel() {
 function newRecord(t) {
 	var d = new Date();
 	y = Math.round((t.acceleration.y) * 100) / 100
+	x = Math.round((t.acceleration.x) * 100) / 100
 	var text = document.getElementById("Accel");
 	var time = (d.getTime() - window.startTime)/1000
-	text.innerHTML = y + " m/s^2" + "Time Passed: " + time + " seconds"
+	text.innerHTML = y + " m/s^2, and " x + "m/s^2" + "Time Passed: " + time + " seconds"
 	console.log(t.acceleration.y + " " + time);
 	console.log([t.acceleration.y, time])
-	var newData = [time, t.acceleration.y]
+	console.log(t.acceleration.x + " " + time);
+	console.log([t.acceleration.x, time])
+	var newData = [time, t.acceleration.y, t.acceleration.x]
 	exportData.push(newData);
 	console.log(Start)
 }
@@ -69,6 +72,11 @@ function download() {
 		csvContent += row + "\r\n";
 	});
 	var encodedUri = encodeURI(csvContent);
+	var download = document.createElement("a");
+	link.href = csvContent;
+	link.download = "Experiment_1.csv";
+	link.click();
+	
 	window.open(encodedUri);
 	console.log("downloaded")
 }
