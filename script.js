@@ -78,5 +78,5 @@ function download() {
 	link.click();
 	
 	window.open(encodedUri);
-	console.log("downloaded")
+	console.log("downloaded");
 }
