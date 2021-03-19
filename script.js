@@ -23,7 +23,7 @@ function newRecord(t) {
 	x = Math.round((t.acceleration.x) * 100) / 100
 	var text = document.getElementById("Accel");
 	var time = (d.getTime() - window.startTime)/1000
-	text.innerHTML = y + " m/s^2, and " x + "m/s^2" + "Time Passed: " + time + " seconds"
+	text.innerHTML = y + " m/s^2, and " + x + "m/s^2" + "Time Passed: " + time + " seconds"
 	console.log(t.acceleration.y + " " + time);
 	console.log([t.acceleration.y, time])
 	console.log(t.acceleration.x + " " + time);
