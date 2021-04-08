@@ -1,9 +1,9 @@
 var x = 1
 var y = 1
 var Start = 1
-var exportData = newArray (
-	["time", "accel_y", "accel_x"]
-	);
+var exportData = [
+	["time", "accel_y", "accel_x"],
+	];
 var newData = [1, 2, 3]
 console.log(exportData);
 
@@ -25,9 +25,9 @@ function newRecord(t) {
 	var time = (d.getTime() - window.startTime)/1000
 	text.innerHTML = y + " m/s^2, and " + x + "m/s^2" + "Time Passed: " + time + " seconds"
 	console.log(t.acceleration.y + " " + time);
-	console.log([t.acceleration.y, time])
+	console.log([t.acceleration.y, time]);
 	console.log(t.acceleration.x + " " + time);
-	console.log([t.acceleration.x, time])
+	console.log([t.acceleration.x, time]);
 	var newData = [time, t.acceleration.y, t.acceleration.x];
 	exportData.push(newData);
 	console.log(Start);
