@@ -2,7 +2,7 @@ var x = 1
 var y = 1
 var Start = 1
 var exportData = [
-	["time", "accel_y", "accel_x"],
+	["time", "accel_y", "accel_x"]
 	];
 var newData = [1, 2, 3]
 console.log(exportData);
