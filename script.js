@@ -4,7 +4,7 @@ var Start = 1
 var exportData = [
 	["time", "accel_y", "accel_x"],
 	];
-var newData = [1, 2]
+var newData = [1, 2, 3]
 console.log(exportData);
 
 function getAccel() {
