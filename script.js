@@ -56,7 +56,7 @@ function clear() {
 	console.log("clear button pressed")
 	if (window.confirm("Are you sure you want to clear data?")) {
   		var exportData = [
-		["time", "accel_y"],
+		["time", "accel_y", "accel_x"],
 		];
 	} else {
  		window.alert("Canceled");
