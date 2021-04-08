@@ -1,9 +1,9 @@
 var x = 1
 var y = 1
 var Start = 1
-var exportData = [
+var exportData = newArray (
 	["time", "accel_y", "accel_x"]
-	];
+	);
 var newData = [1, 2, 3]
 console.log(exportData);
 
@@ -28,9 +28,9 @@ function newRecord(t) {
 	console.log([t.acceleration.y, time])
 	console.log(t.acceleration.x + " " + time);
 	console.log([t.acceleration.x, time])
-	var newData = [time, t.acceleration.y, t.acceleration.x]
+	var newData = [time, t.acceleration.y, t.acceleration.x];
 	exportData.push(newData);
-	console.log(Start)
+	console.log(Start);
 }
 
 function recordAccel() {
