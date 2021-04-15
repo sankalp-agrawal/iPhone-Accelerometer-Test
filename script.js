@@ -70,7 +70,7 @@ function download() {
 	let csvContent = "data:text/csv;charset=utf-8,";
 	exportData.forEach(function(rowArray) {
 		let row = rowArray.join(",");
-		csvContent += row + "\r\n";
+		csvContent += row + "\r\r\n";
 	});
 	var encodedUri = encodeURI(csvContent);
 	var datadownload = document.createElement("a");
