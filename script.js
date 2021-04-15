@@ -30,7 +30,8 @@ function newRecord(t) {
 	console.log([t.acceleration.x, time]);
 	var newData = [time, t.acceleration.y, t.acceleration.x]
 	exportData.push(newData);
-	console.log(newData);
+	var text = document.getElementByID("Data");
+	text.innerHTML = newData
 	console.log(Start);
 }
 
