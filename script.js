@@ -31,7 +31,7 @@ function newRecord(t) {
 	var newData = [time, t.acceleration.y, t.acceleration.x]
 	exportData.push(newData);
 	var text = document.getElementById("Data");
-	text.innerHTML = newData
+	text.innerHTML = exportData
 	console.log(Start);
 }
 
