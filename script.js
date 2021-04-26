@@ -4,7 +4,7 @@ var Start = 1
 var exportData = [
 	["time", "accel_y", "accel_x"],
 	];
-var newData = [1, 2, 3]
+var newData = [1, 2]
 console.log(exportData);
 
 function getAccel() {
@@ -25,14 +25,12 @@ function newRecord(t) {
 	var time = (d.getTime() - window.startTime)/1000
 	text.innerHTML = y + " m/s^2, and " + x + "m/s^2" + "Time Passed: " + time + " seconds"
 	console.log(t.acceleration.y + " " + time);
-	console.log([t.acceleration.y, time]);
+	console.log([t.acceleration.y, time])
 	console.log(t.acceleration.x + " " + time);
-	console.log([t.acceleration.x, time]);
+	console.log([t.acceleration.x, time])
 	var newData = [time, t.acceleration.y, t.acceleration.x]
 	exportData.push(newData);
-	var text = document.getElementById("Data");
-	text.innerHTML = exportData
-	console.log(Start);
+	console.log(Start)
 }
 
 function recordAccel() {
@@ -58,7 +56,7 @@ function clear() {
 	console.log("clear button pressed")
 	if (window.confirm("Are you sure you want to clear data?")) {
   		var exportData = [
-		["time", "accel_y", "accel_x"],
+		["time", "accel_y"],
 		];
 	} else {
  		window.alert("Canceled");
@@ -75,7 +73,7 @@ function download() {
 	var encodedUri = encodeURI(csvContent);
 	var datadownload = document.createElement("a");
 	datadownload.href = csvContent;
-	console.log(document.getElementById("number").value)
+	var number = document.getElementById("number").value
 	datadownload.download = String("Experiment_" + number +".csv");
 	datadownload.click();
 }
